@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a id="clickme">
+        <h1>CLICK ME!</h1>
+    </a>
+    <script>
+        const response_type = "code";
+        const grant_type = "authorization_code";
+        const client_id = "81zxkhll2pxi5s";
+        const client_secret = "p7e5icpU78myuOQL";
+        const state = "DCEeFWf45A53sdfKef424fdfefefefe";
+        const scope = "r_liteprofile%20r_emailaddress%20w_member_social";
+        // const redirect_uri = "https://www.google.com/";
+        const redirect_uri = "https://www.linkedin.com/developers/apps/11951355/auth/test";
+
+        // let code = "AQQmuL32-6NAb5waZBaZhhLvMJ66arBANNlLG23T-D6LrTjN2hzmzvRBMsfz0n7OaSBEclaGfEA_CZ-Zw5Z5D5ZA71EyXY62XzVASU1ZOCTsmTvZgZF2keKWTeoK0FPg2L-ReE3-FvOZfTZjsvlqbgI8z034GZMziNq4THBTVwjkGtic5dwGbzGF1WAlFA"
+        let code = ""
+        const url = `https://www.linkedin.com/oauth/v2/authorization?response_type=${response_type}&&client_id=${client_id}&&redirect_uri=${redirect_uri}&&state=${state}&&scope=${scope}`
+        document.getElementById("clickme").href = url
+    </script>
+</body>
+
+</html>
